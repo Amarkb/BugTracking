@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="iTraceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CO">
+    <Key>
+      <PropertyRef Name="SAK_CSR" />
+    </Key>
+    <Property Name="SAK_CSR" Type="float" Nullable="false" />
+    <Property Name="SAK_CSR_TYPE" Type="float" />
+    <Property Name="SAK_RELEASE" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAK_DEFECT_TYPE" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAK_ANY_OBJECT_TYPE" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAK_CO_GROUPING" Type="float" />
+    <Property Name="SAK_TEST_CASE" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAK_LEVEL" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAK_GROUP" Type="nvarchar" MaxLength="255" />
+    <Property Name="NAM" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAK_SUBSYSTEM_AREA" Type="float" />
+    <Property Name="EXTERNAL_ID" Type="nvarchar" MaxLength="255" />
+    <Property Name="DSC" Type="nvarchar(max)" />
+    <Property Name="DSC_BUS_IMPACT" Type="nvarchar(max)" />
+    <Property Name="DSC_TECH_SPEC" Type="nvarchar(max)" />
+    <Property Name="NUM_EST_HOURS" Type="nvarchar" MaxLength="255" />
+    <Property Name="NUM_EST_HOURS_COMPUTED" Type="nvarchar" MaxLength="255" />
+    <Property Name="NUM_PRIORITY" Type="nvarchar" MaxLength="255" />
+    <Property Name="NUM_ACTUAL_HOURS" Type="nvarchar" MaxLength="255" />
+    <Property Name="IND_BILLABLE" Type="nvarchar" MaxLength="255" />
+    <Property Name="IND_SEVERITY" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAK_CUST_SEVERITY" Type="nvarchar" MaxLength="255" />
+    <Property Name="IND_OPERATIONS" Type="nvarchar" MaxLength="255" />
+    <Property Name="IND_ENVIRONMENT" Type="nvarchar" MaxLength="255" />
+    <Property Name="DTE_EST_ITF" Type="nvarchar" MaxLength="255" />
+    <Property Name="DTE_DUE" Type="nvarchar" MaxLength="255" />
+    <Property Name="IND_POST_IMP_WORK" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAK_PROJECT" Type="float" />
+    <Property Name="REFERENCE_CO" Type="float" />
+    <Property Name="CONTRACT_ID" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAK_PARTICIPANT" Type="float" />
+    <Property Name="CURRENT_STATUS_COMMENT" Type="nvarchar" MaxLength="255" />
+    <Property Name="PROVIDER_ID" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAK_DOCUMENT_TYPE" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="iTraceModelStoreContainer">
+    <EntitySet Name="CO" EntityType="Self.CO" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

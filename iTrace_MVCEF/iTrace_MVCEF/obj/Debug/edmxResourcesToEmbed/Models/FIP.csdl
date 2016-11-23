@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="iTraceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CO">
+    <Key>
+      <PropertyRef Name="SAK_CSR" />
+    </Key>
+    <Property Name="SAK_CSR" Type="Double" Nullable="false" />
+    <Property Name="SAK_CSR_TYPE" Type="Double" />
+    <Property Name="SAK_RELEASE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SAK_DEFECT_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SAK_ANY_OBJECT_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SAK_CO_GROUPING" Type="Double" />
+    <Property Name="SAK_TEST_CASE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SAK_LEVEL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SAK_GROUP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NAM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SAK_SUBSYSTEM_AREA" Type="Double" />
+    <Property Name="EXTERNAL_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DSC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DSC_BUS_IMPACT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DSC_TECH_SPEC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NUM_EST_HOURS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NUM_EST_HOURS_COMPUTED" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NUM_PRIORITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NUM_ACTUAL_HOURS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IND_BILLABLE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IND_SEVERITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SAK_CUST_SEVERITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IND_OPERATIONS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IND_ENVIRONMENT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DTE_EST_ITF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DTE_DUE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IND_POST_IMP_WORK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SAK_PROJECT" Type="Double" />
+    <Property Name="REFERENCE_CO" Type="Double" />
+    <Property Name="CONTRACT_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SAK_PARTICIPANT" Type="Double" />
+    <Property Name="CURRENT_STATUS_COMMENT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PROVIDER_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SAK_DOCUMENT_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="iTraceEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="COes" EntityType="Self.CO" />
+  </EntityContainer>
+</Schema>

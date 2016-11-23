@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="iTraceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CO">
+          <Key>
+            <PropertyRef Name="SAK_CSR" />
+          </Key>
+          <Property Name="SAK_CSR" Type="float" Nullable="false" />
+          <Property Name="SAK_CSR_TYPE" Type="float" />
+          <Property Name="SAK_RELEASE" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAK_DEFECT_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAK_ANY_OBJECT_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAK_CO_GROUPING" Type="float" />
+          <Property Name="SAK_TEST_CASE" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAK_LEVEL" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAK_GROUP" Type="nvarchar" MaxLength="255" />
+          <Property Name="NAM" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAK_SUBSYSTEM_AREA" Type="float" />
+          <Property Name="EXTERNAL_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="DSC" Type="nvarchar(max)" />
+          <Property Name="DSC_BUS_IMPACT" Type="nvarchar(max)" />
+          <Property Name="DSC_TECH_SPEC" Type="nvarchar(max)" />
+          <Property Name="NUM_EST_HOURS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NUM_EST_HOURS_COMPUTED" Type="nvarchar" MaxLength="255" />
+          <Property Name="NUM_PRIORITY" Type="nvarchar" MaxLength="255" />
+          <Property Name="NUM_ACTUAL_HOURS" Type="nvarchar" MaxLength="255" />
+          <Property Name="IND_BILLABLE" Type="nvarchar" MaxLength="255" />
+          <Property Name="IND_SEVERITY" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAK_CUST_SEVERITY" Type="nvarchar" MaxLength="255" />
+          <Property Name="IND_OPERATIONS" Type="nvarchar" MaxLength="255" />
+          <Property Name="IND_ENVIRONMENT" Type="nvarchar" MaxLength="255" />
+          <Property Name="DTE_EST_ITF" Type="nvarchar" MaxLength="255" />
+          <Property Name="DTE_DUE" Type="nvarchar" MaxLength="255" />
+          <Property Name="IND_POST_IMP_WORK" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAK_PROJECT" Type="float" />
+          <Property Name="REFERENCE_CO" Type="float" />
+          <Property Name="CONTRACT_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAK_PARTICIPANT" Type="float" />
+          <Property Name="CURRENT_STATUS_COMMENT" Type="nvarchar" MaxLength="255" />
+          <Property Name="PROVIDER_ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAK_DOCUMENT_TYPE" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="iTraceModelStoreContainer">
+          <EntitySet Name="CO" EntityType="Self.CO" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="iTraceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CO">
+          <Key>
+            <PropertyRef Name="SAK_CSR" />
+          </Key>
+          <Property Name="SAK_CSR" Type="Double" Nullable="false" />
+          <Property Name="SAK_CSR_TYPE" Type="Double" />
+          <Property Name="SAK_RELEASE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAK_DEFECT_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAK_ANY_OBJECT_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAK_CO_GROUPING" Type="Double" />
+          <Property Name="SAK_TEST_CASE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAK_LEVEL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAK_GROUP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NAM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAK_SUBSYSTEM_AREA" Type="Double" />
+          <Property Name="EXTERNAL_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DSC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DSC_BUS_IMPACT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DSC_TECH_SPEC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NUM_EST_HOURS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NUM_EST_HOURS_COMPUTED" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NUM_PRIORITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NUM_ACTUAL_HOURS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IND_BILLABLE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IND_SEVERITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAK_CUST_SEVERITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IND_OPERATIONS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IND_ENVIRONMENT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DTE_EST_ITF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DTE_DUE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IND_POST_IMP_WORK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAK_PROJECT" Type="Double" />
+          <Property Name="REFERENCE_CO" Type="Double" />
+          <Property Name="CONTRACT_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAK_PARTICIPANT" Type="Double" />
+          <Property Name="CURRENT_STATUS_COMMENT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PROVIDER_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SAK_DOCUMENT_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="iTraceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="COes" EntityType="Self.CO" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="iTraceModelStoreContainer" CdmEntityContainer="iTraceEntities">
+          <EntitySetMapping Name="COes">
+            <EntityTypeMapping TypeName="iTraceModel.CO">
+              <MappingFragment StoreEntitySet="CO">
+                <ScalarProperty Name="SAK_CSR" ColumnName="SAK_CSR" />
+                <ScalarProperty Name="SAK_CSR_TYPE" ColumnName="SAK_CSR_TYPE" />
+                <ScalarProperty Name="SAK_RELEASE" ColumnName="SAK_RELEASE" />
+                <ScalarProperty Name="SAK_DEFECT_TYPE" ColumnName="SAK_DEFECT_TYPE" />
+                <ScalarProperty Name="SAK_ANY_OBJECT_TYPE" ColumnName="SAK_ANY_OBJECT_TYPE" />
+                <ScalarProperty Name="SAK_CO_GROUPING" ColumnName="SAK_CO_GROUPING" />
+                <ScalarProperty Name="SAK_TEST_CASE" ColumnName="SAK_TEST_CASE" />
+                <ScalarProperty Name="SAK_LEVEL" ColumnName="SAK_LEVEL" />
+                <ScalarProperty Name="SAK_GROUP" ColumnName="SAK_GROUP" />
+                <ScalarProperty Name="NAM" ColumnName="NAM" />
+                <ScalarProperty Name="SAK_SUBSYSTEM_AREA" ColumnName="SAK_SUBSYSTEM_AREA" />
+                <ScalarProperty Name="EXTERNAL_ID" ColumnName="EXTERNAL_ID" />
+                <ScalarProperty Name="DSC" ColumnName="DSC" />
+                <ScalarProperty Name="DSC_BUS_IMPACT" ColumnName="DSC_BUS_IMPACT" />
+                <ScalarProperty Name="DSC_TECH_SPEC" ColumnName="DSC_TECH_SPEC" />
+                <ScalarProperty Name="NUM_EST_HOURS" ColumnName="NUM_EST_HOURS" />
+                <ScalarProperty Name="NUM_EST_HOURS_COMPUTED" ColumnName="NUM_EST_HOURS_COMPUTED" />
+                <ScalarProperty Name="NUM_PRIORITY" ColumnName="NUM_PRIORITY" />
+                <ScalarProperty Name="NUM_ACTUAL_HOURS" ColumnName="NUM_ACTUAL_HOURS" />
+                <ScalarProperty Name="IND_BILLABLE" ColumnName="IND_BILLABLE" />
+                <ScalarProperty Name="IND_SEVERITY" ColumnName="IND_SEVERITY" />
+                <ScalarProperty Name="SAK_CUST_SEVERITY" ColumnName="SAK_CUST_SEVERITY" />
+                <ScalarProperty Name="IND_OPERATIONS" ColumnName="IND_OPERATIONS" />
+                <ScalarProperty Name="IND_ENVIRONMENT" ColumnName="IND_ENVIRONMENT" />
+                <ScalarProperty Name="DTE_EST_ITF" ColumnName="DTE_EST_ITF" />
+                <ScalarProperty Name="DTE_DUE" ColumnName="DTE_DUE" />
+                <ScalarProperty Name="IND_POST_IMP_WORK" ColumnName="IND_POST_IMP_WORK" />
+                <ScalarProperty Name="SAK_PROJECT" ColumnName="SAK_PROJECT" />
+                <ScalarProperty Name="REFERENCE_CO" ColumnName="REFERENCE_CO" />
+                <ScalarProperty Name="CONTRACT_ID" ColumnName="CONTRACT_ID" />
+                <ScalarProperty Name="SAK_PARTICIPANT" ColumnName="SAK_PARTICIPANT" />
+                <ScalarProperty Name="CURRENT_STATUS_COMMENT" ColumnName="CURRENT_STATUS_COMMENT" />
+                <ScalarProperty Name="PROVIDER_ID" ColumnName="PROVIDER_ID" />
+                <ScalarProperty Name="SAK_DOCUMENT_TYPE" ColumnName="SAK_DOCUMENT_TYPE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

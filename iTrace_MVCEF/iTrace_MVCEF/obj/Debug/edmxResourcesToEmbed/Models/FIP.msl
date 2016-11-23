@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="iTraceModelStoreContainer" CdmEntityContainer="iTraceEntities">
+    <EntitySetMapping Name="COes">
+      <EntityTypeMapping TypeName="iTraceModel.CO">
+        <MappingFragment StoreEntitySet="CO">
+          <ScalarProperty Name="SAK_CSR" ColumnName="SAK_CSR" />
+          <ScalarProperty Name="SAK_CSR_TYPE" ColumnName="SAK_CSR_TYPE" />
+          <ScalarProperty Name="SAK_RELEASE" ColumnName="SAK_RELEASE" />
+          <ScalarProperty Name="SAK_DEFECT_TYPE" ColumnName="SAK_DEFECT_TYPE" />
+          <ScalarProperty Name="SAK_ANY_OBJECT_TYPE" ColumnName="SAK_ANY_OBJECT_TYPE" />
+          <ScalarProperty Name="SAK_CO_GROUPING" ColumnName="SAK_CO_GROUPING" />
+          <ScalarProperty Name="SAK_TEST_CASE" ColumnName="SAK_TEST_CASE" />
+          <ScalarProperty Name="SAK_LEVEL" ColumnName="SAK_LEVEL" />
+          <ScalarProperty Name="SAK_GROUP" ColumnName="SAK_GROUP" />
+          <ScalarProperty Name="NAM" ColumnName="NAM" />
+          <ScalarProperty Name="SAK_SUBSYSTEM_AREA" ColumnName="SAK_SUBSYSTEM_AREA" />
+          <ScalarProperty Name="EXTERNAL_ID" ColumnName="EXTERNAL_ID" />
+          <ScalarProperty Name="DSC" ColumnName="DSC" />
+          <ScalarProperty Name="DSC_BUS_IMPACT" ColumnName="DSC_BUS_IMPACT" />
+          <ScalarProperty Name="DSC_TECH_SPEC" ColumnName="DSC_TECH_SPEC" />
+          <ScalarProperty Name="NUM_EST_HOURS" ColumnName="NUM_EST_HOURS" />
+          <ScalarProperty Name="NUM_EST_HOURS_COMPUTED" ColumnName="NUM_EST_HOURS_COMPUTED" />
+          <ScalarProperty Name="NUM_PRIORITY" ColumnName="NUM_PRIORITY" />
+          <ScalarProperty Name="NUM_ACTUAL_HOURS" ColumnName="NUM_ACTUAL_HOURS" />
+          <ScalarProperty Name="IND_BILLABLE" ColumnName="IND_BILLABLE" />
+          <ScalarProperty Name="IND_SEVERITY" ColumnName="IND_SEVERITY" />
+          <ScalarProperty Name="SAK_CUST_SEVERITY" ColumnName="SAK_CUST_SEVERITY" />
+          <ScalarProperty Name="IND_OPERATIONS" ColumnName="IND_OPERATIONS" />
+          <ScalarProperty Name="IND_ENVIRONMENT" ColumnName="IND_ENVIRONMENT" />
+          <ScalarProperty Name="DTE_EST_ITF" ColumnName="DTE_EST_ITF" />
+          <ScalarProperty Name="DTE_DUE" ColumnName="DTE_DUE" />
+          <ScalarProperty Name="IND_POST_IMP_WORK" ColumnName="IND_POST_IMP_WORK" />
+          <ScalarProperty Name="SAK_PROJECT" ColumnName="SAK_PROJECT" />
+          <ScalarProperty Name="REFERENCE_CO" ColumnName="REFERENCE_CO" />
+          <ScalarProperty Name="CONTRACT_ID" ColumnName="CONTRACT_ID" />
+          <ScalarProperty Name="SAK_PARTICIPANT" ColumnName="SAK_PARTICIPANT" />
+          <ScalarProperty Name="CURRENT_STATUS_COMMENT" ColumnName="CURRENT_STATUS_COMMENT" />
+          <ScalarProperty Name="PROVIDER_ID" ColumnName="PROVIDER_ID" />
+          <ScalarProperty Name="SAK_DOCUMENT_TYPE" ColumnName="SAK_DOCUMENT_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
