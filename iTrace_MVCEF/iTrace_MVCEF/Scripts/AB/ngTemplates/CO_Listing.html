@@ -6,7 +6,7 @@
         <th>CO Name</th>
         <th>CO Type</th>
         <th>SAK_PARTICIPANT</th>
-
+        <th>group</th>
         <th>DSC</th>
         <th></th>
         <th></th>
@@ -17,7 +17,7 @@
         <td ng-bind="contact.NAM"></td>
         <td ng-bind="contact.SAK_CSR_TYPE"></td>
         <td ng-bind="contact.SAK_PARTICIPANT"></td>
-
+        <td ng-bind="contact.SAK_CO_GROUPING"></td>
         <td ng-bind="contact.DSC"></td>
         <td><a href="#/savecontact/{{contact.SAK_CSR}}">Edit</a></td>
         <td><a target="_self" ng-click="DeleteContact(contact.SAK_CSR)">Delete</a></td>
