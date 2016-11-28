@@ -35,15 +35,13 @@
     <div class="form-group">
         <label for="DSC">Group: </label>
          
-        <!--<select name="DSC" required class="form-control"
-                data-ng-model="Groups"
-                data-ng-options="Groups.NAM for Groups in Groups track by Groups.NAM">
+        <select name="DSC" required class="form-control"
+                data-ng-model="Contact.SAK_CO_GROUPING"
+                data-ng-options="Groups.SAK_CO_GROUPING as Groups.NAM for Groups in Groups">
             <option value=""></option>
-        </select>-->
-
-        <select class="form-control">
-            <option ng-repeat="x in Groups">{{x.NAM}}</option>
         </select>
+        <!--track by Groups.NAM-->
+        
     </div>
 
     <div>
