@@ -1,27 +1,21 @@
 ﻿<h2>Save contact</h2>
 <hr />
-<form novalidate role="form" name="contactForm" ng-submit="Submit()">
+<form novalidate role="form" name="addCOForm" ng-submit="Submit()">
     <div class="form-group">
-        <label for="SAK_CSR">SAK ID: </label>
+        <label for="SAK_CSR">CO ID: </label>
         <input type="text" name="SAK_CSR" ng-model="Contact.SAK_CSR" ng-class="IsFormSubmitted ? 'ng-dirty' : ''"
                class="form-control" required />
         <span class="error"
-              ng-show="(contactForm.SAK_CSR.$dirty || IsFormSubmitted) && contactForm.SAK_CSR.$error.required">Contact Name required.</span>
+              ng-show="(addCOForm.SAK_CSR.$dirty || IsFormSubmitted) && addCOForm.SAK_CSR.$error.required">Contact Name required.</span>
     </div>
     <div class="form-group">
-        <label for="NAM">CO NAM: </label>
+        <label for="NAM">CO NAME: </label>
         <input type="text" name="NAM" ng-model="Contact.NAM" ng-class="IsFormSubmitted ? 'ng-dirty' : ''"
                class="form-control" required />
         <span class="error"
-              ng-show="(contactForm.NAM.$dirty || IsFormSubmitted) && contactForm.NAM.$error.required">Contact No required.</span>
+              ng-show="(addCOForm.NAM.$dirty || IsFormSubmitted) && addCOForm.NAM.$error.required">Contact No required.</span>
     </div>
-    <div class="form-group">
-        <label for="SAK_PARTICIPANT">COTypes: </label>
-        <input type="text" name="SAK_CSR_TYPE" ng-model="Contact.SAK_CSR_TYPE" ng-class="IsFormSubmitted ? 'ng-dirty' : ''"
-               class="form-control"  />
-        <span class="error"
-              ng-show="(contactForm.SAK_CSR_TYPE.$dirty || IsFormSubmitted) && contactForm.SAK_CSR_TYPE.$error.email">Invalid SAK_CSR_TYPE.</span>        
-    </div>
+  
     <div class="form-group">
         <label for="DSC">DESC: </label>
         <textarea name="DSC" ng-model="Contact.DSC" class="form-control"></textarea>
@@ -31,10 +25,7 @@
     <div class="form-group">
     <label for="DSC">CoTypes: </label>
          
-        <select class="form-control">
-            <option ng-repeat="x in COTypes">{{x.DSC}}</option>
-        </select>
-
+          
         <select name="COTypes" required class="form-control"
                 data-ng-model="Contact.SAK_CSR_TYPE"
                 data-ng-options="COTypes.SAK_CSR_TYPE as COTypes.DSC for COTypes in COTypes">

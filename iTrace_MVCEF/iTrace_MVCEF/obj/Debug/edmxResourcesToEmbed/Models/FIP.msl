@@ -41,5 +41,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CO_Grouping">
+      <EntityTypeMapping TypeName="iTraceModel.CO_Grouping">
+        <MappingFragment StoreEntitySet="CO_Grouping">
+          <ScalarProperty Name="DSC" ColumnName="DSC" />
+          <ScalarProperty Name="NAM" ColumnName="NAM" />
+          <ScalarProperty Name="SAK_CO_GROUPING" ColumnName="SAK_CO_GROUPING" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CO_type">
+      <EntityTypeMapping TypeName="iTraceModel.CO_type">
+        <MappingFragment StoreEntitySet="CO_type">
+          <ScalarProperty Name="DSC" ColumnName="DSC" />
+          <ScalarProperty Name="SAK_CSR_TYPE" ColumnName="SAK_CSR_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

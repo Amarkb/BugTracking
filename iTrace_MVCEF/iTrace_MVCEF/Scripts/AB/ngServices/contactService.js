@@ -10,6 +10,24 @@ app.factory('contactService', ['$http', '$q', function ($http, $q) {
         return defer.promise;
     }
 
+    fac.GetCOTypes = function () {
+        var defer = $q.defer();
+        $http.get('/home/GetCOTypes')
+        .success(function (data) {
+            defer.resolve(data);
+        });
+        return defer.promise;
+    }
+
+    fac.GetGroups = function () {
+        var defer = $q.defer();
+        $http.get('/home/GetGroups')
+        .success(function (data) {
+            defer.resolve(data);
+        });
+        return defer.promise;
+    }
+
     fac.CO_Listing = function () {
         var defer = $q.defer();
         $http.get('/API/COes')
@@ -44,6 +62,17 @@ app.factory('contactService', ['$http', '$q', function ($http, $q) {
         return defer.promise;
     }
 
+    fac.AddCO = function (contact) {
+        var defer = $q.defer();
+        $http({
+            method: "post",
+            url: '/home/AddCO',
+            data: contact
+        }).then(function (response) {
+            defer.resolve(response.data);
+        })
+        return defer.promise;
+    }
     fac.DeleteContact = function (contactID) {
         var defer = $q.defer();
         $http({

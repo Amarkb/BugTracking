@@ -1,5 +1,5 @@
 ﻿var app = angular.module('myContactBook');
-app.controller('saveContactController', ['$scope', '$routeParams', '$location', 'contactService'
+app.controller('AddCOController', ['$scope', '$routeParams', '$location', 'contactService'
     , function ($scope, $routeParams, $location, contactService) {
         
         $scope.IsFormSubmitted = false;
@@ -36,7 +36,7 @@ app.controller('saveContactController', ['$scope', '$routeParams', '$location', 
         }
 
         // check form
-        $scope.$watch('contactForm.$valid', function (newValue) {
+        $scope.$watch('addCOForm.$valid', function (newValue) {
             $scope.IsFormValid = newValue;
         });
 
@@ -53,7 +53,7 @@ app.controller('saveContactController', ['$scope', '$routeParams', '$location', 
         $scope.Submit = function () {
             $scope.IsFormSubmitted = true;
             if ($scope.IsFormValid) {
-                contactService.SaveContact($scope.Contact).then(function (data) {
+                contactService.AddCO($scope.Contact).then(function (data) {
                     if (data.status) {
                         alert('Contact saved successfully.');
                         $location.path('/home');

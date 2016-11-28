@@ -41,5 +41,22 @@
   </EntityType>
   <EntityContainer Name="iTraceEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="COes" EntityType="Self.CO" />
+    <EntitySet Name="CO_Grouping" EntityType="iTraceModel.CO_Grouping" />
+    <EntitySet Name="CO_type" EntityType="iTraceModel.CO_type" />
   </EntityContainer>
+  <EntityType Name="CO_Grouping">
+    <Key>
+      <PropertyRef Name="SAK_CO_GROUPING" />
+    </Key>
+    <Property Name="SAK_CO_GROUPING" Type="Double" Nullable="false" />
+    <Property Name="NAM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DSC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CO_type">
+    <Key>
+      <PropertyRef Name="SAK_CSR_TYPE" />
+    </Key>
+    <Property Name="SAK_CSR_TYPE" Type="Double" Nullable="false" />
+    <Property Name="DSC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

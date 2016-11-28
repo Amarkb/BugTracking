@@ -14,6 +14,10 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
             templateUrl: '/Scripts/AB/ngTemplates/savecontact.html',
             controller: 'saveContactController'
         })
+        .when('/AddCO/:id', {
+            templateUrl: '/Scripts/AB/ngTemplates/AddCo.html',
+            controller: 'AddCOController'
+        })
         .when('/', {
             redirectTo: function () {
                 return '/home';

@@ -246,6 +246,12 @@
     <Compile Include="Models\CO.cs">
       <DependentUpon>FIP.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CO_Grouping.cs">
+      <DependentUpon>FIP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CO_type.cs">
+      <DependentUpon>FIP.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\FIP.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -288,11 +294,13 @@
     <Content Include="Scripts\AB\ngControllers\errorController.js" />
     <Content Include="Scripts\AB\ngControllers\CO_ListingController.js" />
     <Content Include="Scripts\AB\ngControllers\homeController.js" />
+    <Content Include="Scripts\AB\ngControllers\AddCOController.js" />
     <Content Include="Scripts\AB\ngControllers\saveContactController.js" />
     <Content Include="Scripts\AB\ngServices\contactService.js" />
     <Content Include="Scripts\AB\ngTemplates\error.html" />
     <Content Include="Scripts\AB\ngTemplates\CO_Listing.html" />
     <Content Include="Scripts\AB\ngTemplates\home.html" />
+    <Content Include="Scripts\AB\ngTemplates\AddCO.html" />
     <Content Include="Scripts\AB\ngTemplates\savecontact.html" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />

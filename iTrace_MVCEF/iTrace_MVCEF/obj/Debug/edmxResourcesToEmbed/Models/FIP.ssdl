@@ -39,7 +39,24 @@
     <Property Name="PROVIDER_ID" Type="nvarchar" MaxLength="255" />
     <Property Name="SAK_DOCUMENT_TYPE" Type="nvarchar" MaxLength="255" />
   </EntityType>
+  <EntityType Name="CO_Grouping">
+    <Key>
+      <PropertyRef Name="SAK_CO_GROUPING" />
+    </Key>
+    <Property Name="SAK_CO_GROUPING" Type="float" Nullable="false" />
+    <Property Name="NAM" Type="nvarchar" MaxLength="255" />
+    <Property Name="DSC" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="CO_type">
+    <Key>
+      <PropertyRef Name="SAK_CSR_TYPE" />
+    </Key>
+    <Property Name="SAK_CSR_TYPE" Type="float" Nullable="false" />
+    <Property Name="DSC" Type="nvarchar" MaxLength="255" />
+  </EntityType>
   <EntityContainer Name="iTraceModelStoreContainer">
     <EntitySet Name="CO" EntityType="Self.CO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CO_Grouping" EntityType="Self.CO_Grouping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CO_type" EntityType="Self.CO_type" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
