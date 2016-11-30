@@ -1,0 +1,20 @@
+﻿<h4>CO List </h4>
+<hr />
+  <style>
+        .gridStyle
+        {
+            border: 5px solid #d4d4d4;
+            width: 1400px;
+            height: 1200px;
+        }
+    </style>  
+<div>
+    <labl><b> Sample Demo to NG Grid</b></labl>
+</div>
+<div class="col-md-12" ng-controller="COesGridController">
+    <div ui-grid="gridOptions"
+         ui-grid-resize-columns
+         ui-grid-move-columns
+         ui-grid-exporter
+         ui-grid-selection
+         ui-grid-pinning class="grid"></div>

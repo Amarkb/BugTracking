@@ -175,6 +175,6 @@ C:\Users\amar\Documents\Visual Studio 2015\Projects\iTrace_MVCEF\iTrace_MVCEF\iT
 C:\Users\amar\Documents\Visual Studio 2015\Projects\iTrace_MVCEF\iTrace_MVCEF\iTrace_MVCEF\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\amar\Documents\Visual Studio 2015\Projects\iTrace_MVCEF\iTrace_MVCEF\iTrace_MVCEF\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\amar\Documents\Visual Studio 2015\Projects\iTrace_MVCEF\iTrace_MVCEF\iTrace_MVCEF\bin\System.Web.Http.Owin.xml
-C:\Users\amar\Documents\Visual Studio 2015\Projects\iTrace_MVCEF\iTrace_MVCEF\iTrace_MVCEF\obj\Debug\iTrace_MVCEF.csprojResolveAssemblyReference.cache
 C:\Users\amar\Documents\Visual Studio 2015\Projects\iTrace_MVCEF\iTrace_MVCEF\iTrace_MVCEF\obj\Debug\iTrace_MVCEF.dll
 C:\Users\amar\Documents\Visual Studio 2015\Projects\iTrace_MVCEF\iTrace_MVCEF\iTrace_MVCEF\obj\Debug\iTrace_MVCEF.pdb
+C:\Users\amar\Documents\Visual Studio 2015\Projects\iTrace_MVCEF\iTrace_MVCEF\iTrace_MVCEF\obj\Debug\iTrace_MVCEF.csprojResolveAssemblyReference.cache

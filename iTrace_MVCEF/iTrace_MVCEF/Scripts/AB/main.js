@@ -10,6 +10,10 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
                templateUrl: '/Scripts/AB/ngTemplates/CO_Listing.html',
                controller: 'COesController'
            })
+        .when('/CO_ListingGrid', {
+            templateUrl: '/Scripts/AB/ngTemplates/CO_ListingGrid.html',
+            controller: 'COesGridController'
+        })
         .when('/savecontact/:id', {
             templateUrl: '/Scripts/AB/ngTemplates/savecontact.html',
             controller: 'saveContactController'
