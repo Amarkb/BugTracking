@@ -29,7 +29,7 @@
     <Property Name="IND_OPERATIONS" Type="nvarchar" MaxLength="255" />
     <Property Name="IND_ENVIRONMENT" Type="nvarchar" MaxLength="255" />
     <Property Name="DTE_EST_ITF" Type="nvarchar" MaxLength="255" />
-    <Property Name="DTE_DUE" Type="nvarchar" MaxLength="255" />
+    <Property Name="DTE_DUE" Type="datetime" />
     <Property Name="IND_POST_IMP_WORK" Type="nvarchar" MaxLength="255" />
     <Property Name="SAK_PROJECT" Type="float" />
     <Property Name="REFERENCE_CO" Type="float" />

@@ -42,23 +42,26 @@
         </select>
         <!--track by Groups.NAM-->
         
-    </div>
+    </div>ddddz
 
     <div>
         test date :
         <input id="date-birth" class="form-control" type="date" ng-model="myDate">
-
+        Release Date:
         <div layout-gt-xs="row">
             <div flex-gt-xs>
                 <h4>Standard date-picker</h4>
-                <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+                <md-datepicker ng-model="Contact.DTE_DUE" md-placeholder="Enter date"></md-datepicker>
             </div>
-            test date :
+        </div>
+        <hr />
+        <div>
+            From date :
             <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
-            <md-datepicker name="dateField" ng-model="myDate" md-placeholder="Enter date"
+             To Date:<md-datepicker name="dateField" ng-model="myDate" md-placeholder="Enter date"
                            required md-min-date="minDate" md-max-date="maxDate"
                            md-date-filter="onlyWeekendsPredicate"></md-datepicker>
-        </div>
+        </div> 
         </div>
     <input type="submit" class="btn btn-default" />
 

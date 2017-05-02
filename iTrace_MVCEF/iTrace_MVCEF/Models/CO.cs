@@ -39,7 +39,7 @@ namespace iTrace_MVCEF.Models
         public string IND_OPERATIONS { get; set; }
         public string IND_ENVIRONMENT { get; set; }
         public string DTE_EST_ITF { get; set; }
-        public string DTE_DUE { get; set; }
+        public Nullable<System.DateTime> DTE_DUE { get; set; }
         public string IND_POST_IMP_WORK { get; set; }
         public Nullable<double> SAK_PROJECT { get; set; }
         public Nullable<double> REFERENCE_CO { get; set; }

@@ -34,7 +34,7 @@
           <Property Name="IND_OPERATIONS" Type="nvarchar" MaxLength="255" />
           <Property Name="IND_ENVIRONMENT" Type="nvarchar" MaxLength="255" />
           <Property Name="DTE_EST_ITF" Type="nvarchar" MaxLength="255" />
-          <Property Name="DTE_DUE" Type="nvarchar" MaxLength="255" />
+          <Property Name="DTE_DUE" Type="datetime" />
           <Property Name="IND_POST_IMP_WORK" Type="nvarchar" MaxLength="255" />
           <Property Name="SAK_PROJECT" Type="float" />
           <Property Name="REFERENCE_CO" Type="float" />
@@ -97,7 +97,7 @@
           <Property Name="IND_OPERATIONS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="IND_ENVIRONMENT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="DTE_EST_ITF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="DTE_DUE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DTE_DUE" Type="DateTime" Precision="3" />
           <Property Name="IND_POST_IMP_WORK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="SAK_PROJECT" Type="Double" />
           <Property Name="REFERENCE_CO" Type="Double" />

@@ -17,9 +17,15 @@ namespace iTrace_MVCEF.Controllers
         private iTraceEntities db = new iTraceEntities();
 
         // GET: api/COes
-        public IQueryable<CO> GetCOes()
+        //public IQueryable<CO> GetCOes()
+        //{
+        //    return db.COes ;
+        //}
+
+        // GET: api/COes
+        public IQueryable<COList> GetCOList()
         {
-            return db.COes;
+            return db.COes.Select(p => new COList { SAK_CSR = p.SAK_CSR, NAM = p.NAM,dte_due =p.DTE_DUE , DSC = p.DSC, SAK_CO_GROUPING = p.SAK_CO_GROUPING });
         }
 
         // GET: api/COes/5

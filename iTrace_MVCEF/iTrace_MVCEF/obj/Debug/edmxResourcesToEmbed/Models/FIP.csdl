@@ -29,7 +29,7 @@
     <Property Name="IND_OPERATIONS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="IND_ENVIRONMENT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="DTE_EST_ITF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="DTE_DUE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DTE_DUE" Type="DateTime" Precision="3" />
     <Property Name="IND_POST_IMP_WORK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="SAK_PROJECT" Type="Double" />
     <Property Name="REFERENCE_CO" Type="Double" />

@@ -37,6 +37,16 @@ app.factory('contactService', ['$http', '$q', function ($http, $q) {
         return defer.promise;
     }
 
+    
+       fac.GetCOList = function () {
+        var defer = $q.defer();
+           $http.get('/API/COes')
+        .success(function (data) {
+            defer.resolve(data);
+        });
+        return defer.promise;
+    }
+
     fac.GetContact = function (contactID) {
         var defer = $q.defer();
         $http.get('/home/getcontact', {
