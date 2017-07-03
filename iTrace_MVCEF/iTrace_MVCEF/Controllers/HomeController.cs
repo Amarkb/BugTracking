@@ -30,6 +30,13 @@ namespace iTrace_MVCEF.Controllers
             var Coes = db.CO_Grouping.ToList();
             return new JsonResult { Data = Coes, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
+
+        //public JsonResult GetGroup(int ID)
+        //{
+        //    iTraceEntities db = new iTraceEntities();
+        //    var Coes = db.CO_Grouping.Where(p => p.SAK_CO_GROUPING == ID).FirstOrDefault();
+        //    return new JsonResult { Data = Coes, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        //}
         public JsonResult GetContacts()
         {
             iTraceEntities db = new iTraceEntities();
@@ -100,6 +107,34 @@ namespace iTrace_MVCEF.Controllers
                            //create
                             dc.COes.Add(contact);
                         
+                        dc.SaveChanges();
+                        status = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+            }
+            return new JsonResult { Data = new { status = status, message = message } };
+        }
+
+
+        // Create CO
+        [HttpPost]
+        public JsonResult AddGroup(CO_Grouping contact)
+        {
+            bool status = false;
+            string message = "";
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    using (iTraceEntities dc = new iTraceEntities())
+                    {
+                        //create
+                        dc.CO_Grouping.Add(contact);
+
                         dc.SaveChanges();
                         status = true;
                     }

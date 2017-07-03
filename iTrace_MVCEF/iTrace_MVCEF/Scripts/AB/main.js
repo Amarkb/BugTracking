@@ -34,6 +34,14 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
             templateUrl: '/Scripts/AB/ngTemplates/AddCo.html',
             controller: 'AddCOController'
         })
+        .when('/AddGroup/:id', {
+            templateUrl: '/Scripts/AB/ngTemplates/AddGroup.html',
+            controller: 'AddGroupController'
+        })
+         .when('/GroupListing', {
+             templateUrl: '/Scripts/AB/ngTemplates/GroupListing.html',
+             controller: 'HomeController'
+         })
         .when('/', {
             redirectTo: function () {
                 return '/home';

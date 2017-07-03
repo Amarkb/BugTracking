@@ -298,6 +298,7 @@
       <LastGenOutput>FIP.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\AB\main.js" />
+    <Content Include="Scripts\AB\ngControllers\AddGroupController.js" />
     <Content Include="Scripts\AB\ngControllers\CO_ListingGridController.js" />
     <Content Include="Scripts\AB\ngControllers\errorController.js" />
     <Content Include="Scripts\AB\ngControllers\CO_ListingController.js" />
@@ -305,6 +306,8 @@
     <Content Include="Scripts\AB\ngControllers\AddCOController.js" />
     <Content Include="Scripts\AB\ngControllers\saveContactController.js" />
     <Content Include="Scripts\AB\ngServices\contactService.js" />
+    <Content Include="Scripts\AB\ngTemplates\AddGroup.html" />
+    <Content Include="Scripts\AB\ngTemplates\GroupListing.html" />
     <Content Include="Scripts\AB\ngTemplates\CO_ListingGrid.html" />
     <Content Include="Scripts\AB\ngTemplates\error.html" />
     <Content Include="Scripts\AB\ngTemplates\CO_Listing.html" />

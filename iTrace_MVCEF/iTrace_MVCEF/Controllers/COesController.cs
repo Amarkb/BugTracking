@@ -27,6 +27,11 @@ namespace iTrace_MVCEF.Controllers
         {
             return db.COes.Select(p => new COList { SAK_CSR = p.SAK_CSR, NAM = p.NAM,dte_due =p.DTE_DUE , DSC = p.DSC, SAK_CO_GROUPING = p.SAK_CO_GROUPING });
         }
+        // GET: api/COes
+        //public IQueryable<COList> GetGroupList()
+        //{
+        //    return db.CO_Grouping.Select(p => new COList { SAK_CO_GROUPING = p.SAK_CO_GROUPING, NAM = p.NAM, DSC = p.DSC});
+        //}
 
         // GET: api/COes/5
         [ResponseType(typeof(CO))]

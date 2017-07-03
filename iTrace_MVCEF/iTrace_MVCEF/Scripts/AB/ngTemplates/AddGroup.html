@@ -1,0 +1,28 @@
+﻿<h2>Add New Group</h2>
+<hr />
+<form novalidate role="form" name="addGroupForm" ng-submit="Submit()">
+    <div class="form-group">
+        <label for="SAK_CO_GROUPING">Group ID: </label>
+        <input type="text" name="SAK_CO_GROUPING" ng-model="Contact.SAK_CO_GROUPING" ng-class="IsFormSubmitted ? 'ng-dirty' : ''"
+               class="form-control" required />
+        <span class="error"
+              ng-show="(addCOForm.SAK_CO_GROUPING.$dirty || IsFormSubmitted) && addCOForm.SAK_CO_GROUPING.$error.required">Contact Name required.</span>
+    </div>
+    <div class="form-group">
+        <label for="NAM">Group NAME: </label>
+        <input type="text" name="NAM" ng-model="Contact.NAM" ng-class="IsFormSubmitted ? 'ng-dirty' : ''"
+               class="form-control" required />
+        <span class="error"
+              ng-show="(addCOForm.NAM.$dirty || IsFormSubmitted) && addCOForm.NAM.$error.required">Contact No required.</span>
+    </div>
+  
+    <div class="form-group">
+        <label for="DSC">Group DESC: </label>
+        <textarea name="DSC" ng-model="Contact.DSC" class="form-control"></textarea>
+        
+
+    </div>
+    
+    <input type="submit" class="btn btn-default" />
+
+</form>

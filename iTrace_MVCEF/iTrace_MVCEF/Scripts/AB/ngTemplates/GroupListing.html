@@ -1,0 +1,21 @@
+﻿<h4>iTrace Groups</h4>
+<hr />
+<table class="table table-responsive">
+    <tr>
+        <th>Group  ID</th>
+        
+        <th>Group name</th>
+        <th>DSC</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="contact in AllGroups">
+        <td ng-bind="contact.SAK_CO_GROUPING"></td>
+
+        <td ng-bind="contact.NAM"></td>
+        
+        <td ng-bind="contact.DSC"></td>
+        <td><a href="#/AddGroup/{{contact.SAK_CO_GROUPING}}">Edit</a></td>
+        <td><a target="_self" ng-click="DeleteContact(contact.SAK_CO_GROUPING)">Delete</a></td>
+    </tr>
+</table>

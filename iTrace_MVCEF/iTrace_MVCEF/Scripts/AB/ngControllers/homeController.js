@@ -6,7 +6,15 @@ app.controller('HomeController', ['$scope', 'contactService', function ($scope, 
             $scope.contacts = data;
         })
     }
-    populateContacts();
+   //populateContacts();
+
+    $scope.AllGroups = [];
+    function populateGroups() {
+        contactService.GetGroups().then(function (data) {
+            $scope.AllGroups = data;
+        })
+    }
+    //populateGroups();
 
     $scope.DeleteContact = function (contactID) {
         if (confirm('Are you sure?')) {
