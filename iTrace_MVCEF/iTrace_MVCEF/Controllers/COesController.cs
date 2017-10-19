@@ -23,9 +23,25 @@ namespace iTrace_MVCEF.Controllers
         //}
 
         // GET: api/COes
+       // public IQueryable<COList> GetCOList()
+
         public IQueryable<COList> GetCOList()
         {
-            return db.COes.Select(p => new COList { SAK_CSR = p.SAK_CSR, NAM = p.NAM,dte_due =p.DTE_DUE , DSC = p.DSC, SAK_CO_GROUPING = p.SAK_CO_GROUPING });
+            var CO = from c in db.COes
+                     join g in db.co_grouping
+                     on c.SAK_CO_GROUPING equals g.SAK_CO_GROUPING
+                     select new COList { SAK_CSR = c.SAK_CSR, NAM = c.NAM, dte_due = c.DTE_DUE, DSC = c.DSC, GROUP_Nam = g.NAM };
+
+            foreach (var x in CO)
+            {
+
+                var y = x.GROUP_Nam;
+            }
+            //var z = CO.OfType<COList>().ToList();
+            return CO;
+
+
+            // return db.COes.Select(p => new COList { SAK_CSR = p.SAK_CSR, NAM = p.NAM,dte_due =p.DTE_DUE , DSC = p.DSC, GROUP_Nam = p.GROUP_Nam });
         }
         // GET: api/COes
         //public IQueryable<COList> GetGroupList()

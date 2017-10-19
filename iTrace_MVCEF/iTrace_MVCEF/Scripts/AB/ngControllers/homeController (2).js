@@ -14,18 +14,7 @@ app.controller('HomeController', ['$scope', 'contactService', function ($scope, 
             $scope.AllGroups = data;
         })
     }
-    populateGroups();
-
-    $scope.DeleteGroup = function (GroupId) {
-        if (confirm('Are you sure?')) {
-            //Delete contact here
-            contactService.DeleteGroup(GroupId).then(function (data) {
-                if (data.status) {
-                    populateGroups();
-                }
-            });
-        }
-    }
+   populateGroups();
 
     $scope.DeleteContact = function (contactID) {
         if (confirm('Are you sure?')) {

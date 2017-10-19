@@ -12,9 +12,9 @@ namespace iTrace_MVCEF.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CO_Grouping
+    public partial class co_grouping
     {
-        public double SAK_CO_GROUPING { get; set; }
+        public int SAK_CO_GROUPING { get; set; }
         public string NAM { get; set; }
         public string DSC { get; set; }
     }

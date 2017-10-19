@@ -28,6 +28,20 @@ app.factory('contactService', ['$http', '$q', function ($http, $q) {
         return defer.promise;
     }
 
+    
+    fac.GetGroup = function (ID) {
+        var defer = $q.defer();
+        $http.get('/home/GetGroup', {
+            params: {
+                'ID': ID
+            }
+        })
+        .success(function (data) {
+            defer.resolve(data);
+        });
+        return defer.promise;
+    }
+
     fac.CO_Listing = function () {
         var defer = $q.defer();
         $http.get('/API/COes')
@@ -60,7 +74,7 @@ app.factory('contactService', ['$http', '$q', function ($http, $q) {
         var defer = $q.defer();
         $http.get('/home/getcontact', {
             params: {
-                'contactID' : contactID
+                'contactID': contactID
             }
         })
         .success(function (data) {
@@ -110,6 +124,19 @@ app.factory('contactService', ['$http', '$q', function ($http, $q) {
             method: 'POST',
             url: '/home/DeleteContact',
             data : {'contactID' : contactID}
+        }).then(function (response) {
+            defer.resolve(response.data);
+        })
+
+        return defer.promise;
+    }
+
+    fac.DeleteGroup = function (GroupId) {
+        var defer = $q.defer();
+        $http({
+            method: 'POST',
+            url: '/home/DeleteGroup',
+            data: { 'GroupId': GroupId }
         }).then(function (response) {
             defer.resolve(response.data);
         })

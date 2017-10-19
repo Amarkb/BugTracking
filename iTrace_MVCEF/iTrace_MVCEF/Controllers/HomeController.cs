@@ -27,16 +27,16 @@ namespace iTrace_MVCEF.Controllers
         public JsonResult GetGroups()
         {
             iTraceEntities db = new iTraceEntities();
-            var Coes = db.CO_Grouping.ToList();
+            var Coes = db.co_grouping.ToList();
             return new JsonResult { Data = Coes, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
 
-        //public JsonResult GetGroup(int ID)
-        //{
-        //    iTraceEntities db = new iTraceEntities();
-        //    var Coes = db.CO_Grouping.Where(p => p.SAK_CO_GROUPING == ID).FirstOrDefault();
-        //    return new JsonResult { Data = Coes, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
-        //}
+        public JsonResult GetGroup(int ID)
+        {
+            iTraceEntities db = new iTraceEntities();
+            var Coes = db.co_grouping.Where(p => p.SAK_CO_GROUPING == ID).FirstOrDefault();
+            return new JsonResult { Data = Coes, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
         public JsonResult GetContacts()
         {
             iTraceEntities db = new iTraceEntities();
@@ -122,7 +122,7 @@ namespace iTrace_MVCEF.Controllers
 
         // Create CO
         [HttpPost]
-        public JsonResult AddGroup(CO_Grouping contact)
+        public JsonResult AddGroup(co_grouping contact)
         {
             bool status = false;
             string message = "";
@@ -130,15 +130,61 @@ namespace iTrace_MVCEF.Controllers
             {
                 if (ModelState.IsValid)
                 {
+
                     using (iTraceEntities dc = new iTraceEntities())
                     {
                         //create
-                        dc.CO_Grouping.Add(contact);
-
+                        if (contact.SAK_CO_GROUPING>0)
+                        { 
+                            
+                         
+                            //Update
+                            var c = dc.co_grouping.Where(a => a.SAK_CO_GROUPING.Equals(contact.SAK_CO_GROUPING)).FirstOrDefault();
+                            if (c != null)
+                            {
+                                c.SAK_CO_GROUPING = contact.SAK_CO_GROUPING;
+                                c.DSC = contact.DSC;
+                                c.NAM = contact.NAM;
+                                 
+                            }
+                        }
+                        else
+                        {
+                            //create
+                            dc.co_grouping.Add(contact);
+                        }
                         dc.SaveChanges();
                         status = true;
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+            }
+            return new JsonResult { Data = new { status = status, message = message } };
+        }
+
+
+        // Create CO
+        [HttpPost]
+        public JsonResult DeleteGroup(int  GroupId)
+        {
+            bool status = false;
+            string message = "";
+            try
+            {
+                    using (iTraceEntities dc = new iTraceEntities())
+                    { 
+                            //Update
+                            var c = dc.co_grouping.Where(a => a.SAK_CO_GROUPING.Equals(GroupId)).FirstOrDefault();
+                            
+                            //create
+                            dc.co_grouping.Remove(c);
+                        
+                        dc.SaveChanges();
+                        status = true;
+                    }
             }
             catch (Exception ex)
             {

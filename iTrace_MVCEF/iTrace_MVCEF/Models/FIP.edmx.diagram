@@ -6,8 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="f9ce62634909470eabfa9b64739caa78" Name="Diagram1" ZoomLevel="75">
         <EntityTypeShape EntityType="iTraceModel.CO" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="iTraceModel.CO_Grouping" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="iTraceModel.CO_type" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="iTraceModel.co_grouping" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

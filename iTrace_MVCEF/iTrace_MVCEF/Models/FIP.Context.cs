@@ -26,7 +26,7 @@ namespace iTrace_MVCEF.Models
         }
     
         public virtual DbSet<CO> COes { get; set; }
-        public virtual DbSet<CO_Grouping> CO_Grouping { get; set; }
         public virtual DbSet<CO_type> CO_type { get; set; }
+        public virtual DbSet<co_grouping> co_grouping { get; set; }
     }
 }

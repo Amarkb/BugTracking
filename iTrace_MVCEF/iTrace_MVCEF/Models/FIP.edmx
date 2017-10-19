@@ -44,13 +44,13 @@
           <Property Name="PROVIDER_ID" Type="nvarchar" MaxLength="255" />
           <Property Name="SAK_DOCUMENT_TYPE" Type="nvarchar" MaxLength="255" />
         </EntityType>
-        <EntityType Name="CO_Grouping">
+        <EntityType Name="co_grouping">
           <Key>
             <PropertyRef Name="SAK_CO_GROUPING" />
           </Key>
-          <Property Name="SAK_CO_GROUPING" Type="float" Nullable="false" />
-          <Property Name="NAM" Type="nvarchar" MaxLength="255" />
-          <Property Name="DSC" Type="nvarchar" MaxLength="255" />
+          <Property Name="SAK_CO_GROUPING" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAM" Type="nchar" MaxLength="20" />
+          <Property Name="DSC" Type="nchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="CO_type">
           <Key>
@@ -61,7 +61,7 @@
         </EntityType>
         <EntityContainer Name="iTraceModelStoreContainer">
           <EntitySet Name="CO" EntityType="Self.CO" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CO_Grouping" EntityType="Self.CO_Grouping" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="co_grouping" EntityType="Self.co_grouping" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CO_type" EntityType="Self.CO_type" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -109,23 +109,23 @@
         </EntityType>
         <EntityContainer Name="iTraceEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="COes" EntityType="Self.CO" />
-          <EntitySet Name="CO_Grouping" EntityType="iTraceModel.CO_Grouping" />
           <EntitySet Name="CO_type" EntityType="iTraceModel.CO_type" />
+          <EntitySet Name="co_grouping" EntityType="iTraceModel.co_grouping" />
         </EntityContainer>
-        <EntityType Name="CO_Grouping">
-          <Key>
-            <PropertyRef Name="SAK_CO_GROUPING" />
-          </Key>
-          <Property Name="SAK_CO_GROUPING" Type="Double" Nullable="false" />
-          <Property Name="NAM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="DSC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="CO_type">
           <Key>
             <PropertyRef Name="SAK_CSR_TYPE" />
           </Key>
           <Property Name="SAK_CSR_TYPE" Type="Double" Nullable="false" />
           <Property Name="DSC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="co_grouping">
+          <Key>
+            <PropertyRef Name="SAK_CO_GROUPING" />
+          </Key>
+          <Property Name="SAK_CO_GROUPING" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAM" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="DSC" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -173,20 +173,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CO_Grouping">
-            <EntityTypeMapping TypeName="iTraceModel.CO_Grouping">
-              <MappingFragment StoreEntitySet="CO_Grouping">
-                <ScalarProperty Name="DSC" ColumnName="DSC" />
-                <ScalarProperty Name="NAM" ColumnName="NAM" />
-                <ScalarProperty Name="SAK_CO_GROUPING" ColumnName="SAK_CO_GROUPING" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="CO_type">
             <EntityTypeMapping TypeName="iTraceModel.CO_type">
               <MappingFragment StoreEntitySet="CO_type">
                 <ScalarProperty Name="DSC" ColumnName="DSC" />
                 <ScalarProperty Name="SAK_CSR_TYPE" ColumnName="SAK_CSR_TYPE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="co_grouping">
+            <EntityTypeMapping TypeName="iTraceModel.co_grouping">
+              <MappingFragment StoreEntitySet="co_grouping">
+                <ScalarProperty Name="DSC" ColumnName="DSC" />
+                <ScalarProperty Name="NAM" ColumnName="NAM" />
+                <ScalarProperty Name="SAK_CO_GROUPING" ColumnName="SAK_CO_GROUPING" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

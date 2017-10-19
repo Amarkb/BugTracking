@@ -3,22 +3,22 @@
 <form novalidate role="form" name="addGroupForm" ng-submit="Submit()">
     <div class="form-group">
         <label for="SAK_CO_GROUPING">Group ID: </label>
-        <input type="text" name="SAK_CO_GROUPING" ng-model="Contact.SAK_CO_GROUPING" ng-class="IsFormSubmitted ? 'ng-dirty' : ''"
-               class="form-control" required />
+        <input type="text" name="SAK_CO_GROUPING" ng-model="Groups.SAK_CO_GROUPING" ng-class="IsFormSubmitted ? 'ng-dirty' : ''"
+               class="form-control" readonly />
         <span class="error"
-              ng-show="(addCOForm.SAK_CO_GROUPING.$dirty || IsFormSubmitted) && addCOForm.SAK_CO_GROUPING.$error.required">Contact Name required.</span>
+              ng-show="(addCOForm.SAK_CO_GROUPING.$dirty || IsFormSubmitted) && addCOForm.SAK_CO_GROUPING.$error.required">Group Name required.</span>
     </div>
     <div class="form-group">
         <label for="NAM">Group NAME: </label>
-        <input type="text" name="NAM" ng-model="Contact.NAM" ng-class="IsFormSubmitted ? 'ng-dirty' : ''"
+        <input type="text" name="NAM" ng-model="Groups.NAM" ng-class="IsFormSubmitted ? 'ng-dirty' : ''"
                class="form-control" required />
         <span class="error"
-              ng-show="(addCOForm.NAM.$dirty || IsFormSubmitted) && addCOForm.NAM.$error.required">Contact No required.</span>
+              ng-show="(addCOForm.NAM.$dirty || IsFormSubmitted) && addCOForm.NAM.$error.required">Group No required.</span>
     </div>
   
     <div class="form-group">
         <label for="DSC">Group DESC: </label>
-        <textarea name="DSC" ng-model="Contact.DSC" class="form-control"></textarea>
+        <textarea name="DSC" ng-model="Groups.DSC" class="form-control"></textarea>
         
 
     </div>

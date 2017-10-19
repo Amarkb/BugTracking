@@ -8,6 +8,6 @@ namespace iTrace_MVCEF.Controllers
         public string NAM { get; set; }
         public string DSC { get; set; }
         public DateTime? dte_due;
-        public double? SAK_CO_GROUPING { get; set; }
+        public string GROUP_Nam { get; set; }
     }
 }

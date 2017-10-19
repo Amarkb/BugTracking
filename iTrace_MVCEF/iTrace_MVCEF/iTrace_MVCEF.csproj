@@ -78,6 +78,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Security" />
@@ -247,7 +248,7 @@
     <Compile Include="Models\CO.cs">
       <DependentUpon>FIP.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CO_Grouping.cs">
+    <Compile Include="Models\co_grouping.cs">
       <DependentUpon>FIP.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CO_type.cs">
